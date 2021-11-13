@@ -30,6 +30,11 @@ import MessageBox from "./components/MessageBox";
 import DashboardScreen from "./screens/DashboardScreen";
 import SupportScreen from "./screens/SupportScreen";
 import ChatBox from "./components/ChatBox";
+import MatureAcceptScreen from "./screens/MatureAcceptScreen";
+
+
+
+
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -175,6 +180,7 @@ function App() {
           </ul>
         </aside>
         <main>
+        <Route path="/ma" component={MatureAcceptScreen}></Route>
           <Route path="/seller/:id" component={SellerScreen}></Route>
           <Route path="/cart/:id?" component={CartScreen}></Route>
           <Route path="/product/:id" component={ProductScreen} exact></Route>
@@ -255,6 +261,7 @@ function App() {
         </footer>
       </div>
     </BrowserRouter>
+    
   );
 }
 
